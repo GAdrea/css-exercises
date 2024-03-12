@@ -37,12 +37,23 @@ button {
   transform-origin: center;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  opacity: 0%;
+  opacity: 0;
   text-align: center;
 }
-.popup-modal p {
-  margin-bottom: 24px
+
+/* ! Correction */
+.popup-modal {
+  transition: transform 0.3s ease-in-out, opacity 0.4s ease;
+  transform: translate(-50%, -100%);
 }
+/* Cette partie sert à définir l'état de départ avant que la transition se produise */
+
+.popup-modal.show {
+  transform: translate(-50%, -50%);
+}
+/* Cette partie définit la transition qui doit se produire */
+
+/* ! Fin de la correction */
 
 .backdrop {
   pointer-events: none;
@@ -60,4 +71,3 @@ button {
 .backdrop.show {
   opacity: 30%;
 }
-
