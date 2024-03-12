@@ -1,9 +1,23 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* un ptit reset, ça fait du bien */
+
 .header {
   font-family: monospace;
   background: papayawhip;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
+
+/* Eléments centrés sur Y */
+/* Exo résolu */
 
 .logo {
   font-size: 48px;
